@@ -1,1 +1,23 @@
-import steramlit as st
+
+import streamlit as st
+
+st.header('**Smart home**')
+st.caption('remote air_condioning')
+option=st.sidebar.selectbox(
+    'Choose your room',['bedroom','living room','kitchen'],
+)
+st.success(option)
+
+#b=input(option)
+#tem=st.slider('choose tem',16,38,16)
+if option=='bedroom':
+    tem=st.slider('choose temperature',16,30,16)
+    st.write('your temperature is',tem)
+    #st.metric('temperature','16°C','16')
+elif option=='living room':
+    tem=st.slider('choose temperature',16,31,16)
+    st.write('your temperature is',tem)
+else  :
+    tem=st.slider('choose temperature',16,32,16)
+    st.write('your temperature is',tem)
+    
